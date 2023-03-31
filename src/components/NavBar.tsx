@@ -20,6 +20,22 @@ function NavBar() {
     textTransform: "none",
     color: "#000",
     fontFamily: "Inter, sans-serif",
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
+    "&::after": {
+      content: '""',
+      position: "absolute",
+      bottom: "-23px",
+      left: 0,
+      right: 0,
+      height: 0,
+      background: "linear-gradient(90deg, #33d167 0%, #2bb9cd 100%)",
+      transition: "height 0.3s",
+    },
+    "&:hover::after": {
+      height: "6px",
+    },
   };
 
   return (
@@ -29,13 +45,13 @@ function NavBar() {
           sx={{
             justifyContent: "space-around",
             backgroundColor: "#fff",
-            height: "3rem",
+            height: "80px",
           }}
         >
           {/* Logo */}
           <Typography variant="h6" component="div">
             <Link href="/">
-              <Image src="/logo.svg" alt="logo" width={100} height={15} />
+              <Image src="/logo.svg" alt="logo" width={120} height={20} />
             </Link>
           </Typography>
 
@@ -70,8 +86,8 @@ function NavBar() {
               background: "linear-gradient(90deg, #33d167 0%, #2bb9cd 100%)",
               color: "#fff",
               borderRadius: "50px",
-              py: "0.5rem",
-              px: "1.9rem",
+              py: "0.7rem",
+              px: "2.2rem",
               fontSize: "0.8rem",
               fontWeight: 600,
               textTransform: "none",
