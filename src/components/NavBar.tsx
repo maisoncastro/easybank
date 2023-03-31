@@ -16,18 +16,26 @@ import {
 } from "@mui/material";
 
 function NavBar() {
+  const buttonSX = {
+    textTransform: "none",
+    color: "#000",
+    fontFamily: "Inter, sans-serif",
+  };
+
   return (
     <>
       <AppBar position="static">
         <Toolbar
-          sx={{ justifyContent: "space-around", backgroundColor: "#fff" }}
+          sx={{
+            justifyContent: "space-around",
+            backgroundColor: "#fff",
+            height: "3rem",
+          }}
         >
           {/* Logo */}
           <Typography variant="h6" component="div">
             <Link href="/">
-              <Link href="/">
-                <Image src="/logo.svg" alt="logo" width={100} height={15} />
-              </Link>
+              <Image src="/logo.svg" alt="logo" width={100} height={15} />
             </Link>
           </Typography>
 
@@ -40,26 +48,36 @@ function NavBar() {
             }}
           >
             <Link href="/" passHref>
-              <Button color="inherit">Home</Button>
+              <Button sx={buttonSX}>Home</Button>
             </Link>
             <Link href="/about" passHref>
-              <Button color="inherit">About</Button>
+              <Button sx={buttonSX}>About</Button>
             </Link>
             <Link href="/contact" passHref>
-              <Button color="inherit">Contact</Button>
+              <Button sx={buttonSX}>Contact</Button>
             </Link>
             <Link href="/blog" passHref>
-              <Button color="inherit">Blog</Button>
+              <Button sx={buttonSX}>Blog</Button>
             </Link>
             <Link href="/careers" passHref>
-              <Button color="inherit">Careers</Button>
+              <Button sx={buttonSX}>Careers</Button>
             </Link>
           </Box>
 
           {/* Request Invite Button */}
           <Button
             sx={{
-              backgroundColor: "#3b3054",
+              background: "linear-gradient(90deg, #33d167 0%, #2bb9cd 100%)",
+              color: "#fff",
+              borderRadius: "50px",
+              py: "0.5rem",
+              px: "1.9rem",
+              fontSize: "0.8rem",
+              fontWeight: 600,
+              textTransform: "none",
+              "&:hover": {
+                opacity: 0.7,
+              },
             }}
           >
             Request Invite
