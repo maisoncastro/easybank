@@ -1,46 +1,19 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
-import { Inter } from "next/font/google";
-import styles from "@/styles/Home.module.css";
-
 import {
   AppBar,
   Box,
+  Button,
   Container,
   IconButton,
   Menu,
-  MenuIcon,
   MenuItem,
   Toolbar,
   Typography,
 } from "@mui/material";
 
-const pages = ["Home", "About", "Contact", "Blog", "Careers"];
-
 export default function Home() {
-  const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
-    null
-  );
-  const [anchorElUser, setAnchorElUser] = React.useState<null | HTMLElement>(
-    null
-  );
-
-  const handleOpenNavMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElNav(event.currentTarget);
-  };
-  const handleOpenUserMenu = (event: React.MouseEvent<HTMLElement>) => {
-    setAnchorElUser(event.currentTarget);
-  };
-
-  const handleCloseNavMenu = () => {
-    setAnchorElNav(null);
-  };
-
-  const handleCloseUserMenu = () => {
-    setAnchorElUser(null);
-  };
-
   return (
     <>
       <Head>
@@ -49,70 +22,45 @@ export default function Home() {
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      {/* Fixed NavBar */}
-
-      <AppBar position="fixed">
+      {/* Stickied NavBar */}
+      <AppBar
+        sx={{
+          backgroundColor: "white",
+        }}
+        position="sticky"
+      >
         <Toolbar>
-          <Typography
-            variant="h6"
-            noWrap
-            component="a"
-            href="/"
+          <Box
             sx={{
-              mr: 2,
-              display: { xs: "none", md: "flex" },
-              fontFamily: "monospace",
-              fontWeight: 700,
-              letterSpacing: ".3rem",
-              color: "inherit",
-              textDecoration: "none",
+              pl: 6,
             }}
           >
-            LOGO
-          </Typography>
-          <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <MenuIcon />
-            </IconButton>
-            <Menu
-              id="menu-appbar"
-              anchorEl={anchorElNav}
-              anchorOrigin={{
-                vertical: "bottom",
-                horizontal: "left",
-              }}
-              keepMounted
-              transformOrigin={{
-                vertical: "top",
-                horizontal: "left",
-              }}
-              open={Boolean(anchorElNav)}
-              onClose={handleCloseNavMenu}
-              sx={{
-                display: { xs: "block", md: "none" },
-              }}
-            >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
-                </MenuItem>
-              ))}
-            </Menu>
+            <Image src="/logo.svg" alt="logo" width={100} height={15} />
+          </Box>
+
+          <Box
+            sx={{
+              color: "#a9a9a9",
+            }}
+          >
+            <Button color="inherit">Home</Button>
+            <Button color="inherit">About</Button>
+            <Button color="inherit">Contact</Button>
+            <Button color="inherit">Blog</Button>
+            <Button color="inherit">Careers</Button>
+          </Box>
+          <Box>
+            <Button color="inherit">Request Invite</Button>
           </Box>
         </Toolbar>
       </AppBar>
-      <Toolbar />
 
       {/* Header */}
-      <Container>
+      <Container
+        sx={{
+          height: "90vh",
+        }}
+      >
         <Box>Hello</Box>
       </Container>
     </>
