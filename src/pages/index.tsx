@@ -1,6 +1,7 @@
 import React from "react";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import {
   AppBar,
   Box,
@@ -23,37 +24,6 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
       {/* Stickied NavBar */}
-      <AppBar
-        sx={{
-          backgroundColor: "white",
-        }}
-        position="sticky"
-      >
-        <Toolbar>
-          <Box
-            sx={{
-              pl: 6,
-            }}
-          >
-            <Image src="/logo.svg" alt="logo" width={100} height={15} />
-          </Box>
-
-          <Box
-            sx={{
-              color: "#a9a9a9",
-            }}
-          >
-            <Button color="inherit">Home</Button>
-            <Button color="inherit">About</Button>
-            <Button color="inherit">Contact</Button>
-            <Button color="inherit">Blog</Button>
-            <Button color="inherit">Careers</Button>
-          </Box>
-          <Box>
-            <Button color="inherit">Request Invite</Button>
-          </Box>
-        </Toolbar>
-      </AppBar>
 
       {/* Header */}
       <Container
