@@ -51,7 +51,7 @@ function NavBar() {
           {/* Logo */}
           <Typography variant="h6" component="div">
             <Link href="/">
-              <Image src="/logo.svg" alt="logo" width={120} height={20} />
+              <Image src="/logo.svg" alt="logo" width={135} height={20} />
             </Link>
           </Typography>
 
@@ -91,6 +91,7 @@ function NavBar() {
               fontSize: "0.8rem",
               fontWeight: 600,
               textTransform: "none",
+              fontFamily: "Inter, sans-serif",
               "&:hover": {
                 opacity: 0.7,
               },
