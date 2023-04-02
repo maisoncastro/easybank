@@ -40,7 +40,7 @@ function NavBar() {
 
   return (
     <>
-      <AppBar position="static">
+      <AppBar sx={{ boxShadow: "none" }} position="fixed">
         <Toolbar
           sx={{
             justifyContent: "space-around",

@@ -407,6 +407,23 @@ export default function Home() {
           </Box>
         </Container>
       </Box>
+
+      {/* Footer  */}
+
+      <Box
+        sx={{
+          width: "100%",
+          backgroundColor: "#2d314e",
+
+          height: "13rem",
+        }}
+      >
+        <Container>
+          <Box></Box>
+          <Box></Box>
+          <Box></Box>
+        </Container>
+      </Box>
     </>
   );
 }
