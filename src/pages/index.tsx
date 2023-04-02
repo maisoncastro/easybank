@@ -3,18 +3,12 @@ import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import {
-  AppBar,
   Box,
   Button,
   Card,
   CardContent,
   CardMedia,
-  CardActions,
   Container,
-  IconButton,
-  Menu,
-  MenuItem,
-  Toolbar,
   Typography,
 } from "@mui/material";
 
@@ -26,6 +20,7 @@ export default function Home() {
       author: "By Claire Robinson",
       description:
         "The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …",
+      image: "/image-currency.jpg",
     },
     {
       id: 2,
@@ -33,26 +28,23 @@ export default function Home() {
       author: "By Wilson Hutton",
       description:
         "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month.",
+      image: "/image-restaurant.jpg",
     },
     {
       id: 3,
-      author: "By Wilson Hutton",
       title: "Take your Easybank card wherever you go",
+      author: "By Wilson Hutton",
       description:
         "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …",
+      image: "/image-plane.jpg",
     },
     {
       id: 4,
-      author: "By Wilson Hutton",
-      title: "Take your Easybank card wherever you go",
-      description:
-        "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …",
-    },
-    {
-      id: 5,
       author: " By Claire Robinson",
-      title:
+      title: "Our invite-only Beta accounts are now live!",
+      description:
         "After a lot of hard work, by the whole team, we’re excited to launch our closed beta.",
+      image: "/image-confetti.jpg",
     },
   ];
 
@@ -356,6 +348,7 @@ export default function Home() {
             <Typography
               sx={{
                 fontFamily: "Inter, sans-serif",
+                mb: "3rem",
               }}
               variant="h4"
               component="div"
@@ -365,29 +358,51 @@ export default function Home() {
 
             {/* Cards */}
 
-            <Box>
-              <Card sx={{ maxWidth: 345 }}>
-                <CardMedia
-                  component="img"
-                  alt="green iguana"
-                  height="140"
-                  image="/static/images/cards/contemplative-reptile.jpg"
-                />
-                <CardContent>
-                  <Typography gutterBottom variant="h5" component="div">
-                    Lizard
-                  </Typography>
-                  <Typography variant="body2" color="text.secondary">
-                    Lizards are a widespread group of squamate reptiles, with
-                    over 6,000 species, ranging across all continents except
-                    Antarctica
-                  </Typography>
-                </CardContent>
-                <CardActions>
-                  <Button size="small">Share</Button>
-                  <Button size="small">Learn More</Button>
-                </CardActions>
-              </Card>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "row",
+                justifyContent: "space-between",
+                gap: "2rem",
+              }}
+            >
+              {latestArticles.map((article) => (
+                <Box key={article.id}>
+                  <Card
+                    sx={{
+                      maxWidth: 300,
+                      borderRadius: "5px",
+                      boxShadow: "none",
+                    }}
+                  >
+                    <CardMedia
+                      component="img"
+                      alt={article.title}
+                      height="200"
+                      image={article.image}
+                    />
+                    <CardContent
+                      sx={{
+                        height: "100%",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "space-around",
+                        rowGap: "1rem",
+                      }}
+                    >
+                      <Typography variant="body2" color="text.secondary">
+                        {article.author}
+                      </Typography>
+                      <Typography gutterBottom variant="body1" component="div">
+                        {article.title}
+                      </Typography>
+                      <Typography variant="body2" color="text.secondary">
+                        {article.description}
+                      </Typography>
+                    </CardContent>
+                  </Card>
+                </Box>
+              ))}
             </Box>
           </Box>
         </Container>
