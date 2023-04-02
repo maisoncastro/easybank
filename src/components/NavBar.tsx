@@ -50,7 +50,7 @@ function NavBar() {
         >
           {/* Logo */}
           <Link href="/">
-            <Image src="/logo.svg" alt="logo" width={135} height={20} />
+            <Image src="/logo.svg" alt="logo" width={139} height={20} />
           </Link>
 
           {/* Menu Items */}

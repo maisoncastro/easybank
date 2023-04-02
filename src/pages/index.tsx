@@ -48,6 +48,15 @@ export default function Home() {
     },
   ];
 
+  const buttonSX = {
+    textTransform: "none",
+    color: "#fff",
+    fontFamily: "Inter, sans-serif",
+    "&:hover": {
+      backgroundColor: "transparent",
+    },
+  };
+
   return (
     <>
       <Head>
@@ -418,10 +427,170 @@ export default function Home() {
           height: "13rem",
         }}
       >
-        <Container>
-          <Box></Box>
-          <Box></Box>
-          <Box></Box>
+        <Container
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            justifyContent: "space-between",
+
+            py: "3rem",
+          }}
+        >
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between ",
+                width: "100%",
+              }}
+            >
+              <Link href="/">
+                <Image
+                  src="/logo-white.svg"
+                  alt="logo"
+                  width={139}
+                  height={20}
+                />
+              </Link>
+              <Box
+                sx={{
+                  display: "flex",
+                  flexDirection: "row",
+
+                  justifyContent: "space-between",
+                }}
+              >
+                <Link href="/">
+                  <Image
+                    src="/icon-facebook.svg"
+                    alt="logo"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+                <Link href="/">
+                  <Image
+                    src="/icon-twitter.svg"
+                    alt="logo"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+                <Link href="/">
+                  <Image
+                    src="/icon-youtube.svg"
+                    alt="logo"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+                <Link href="/">
+                  <Image
+                    src="/icon-instagram.svg"
+                    alt="logo"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+                <Link href="/">
+                  <Image
+                    src="/icon-pinterest.svg"
+                    alt="logo"
+                    width={20}
+                    height={20}
+                  />
+                </Link>
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "row",
+            }}
+          >
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <Link href="/">
+                <Button sx={buttonSX}>About Us</Button>
+              </Link>
+              <Link href="/">
+                <Button sx={buttonSX}>Contact</Button>
+              </Link>
+              <Link href="/">
+                <Button sx={buttonSX}>Blog</Button>
+              </Link>
+            </Box>
+            <Box
+              sx={{
+                display: "flex",
+                flexDirection: "column",
+                alignItems: "flex-start",
+              }}
+            >
+              <Link href="/">
+                <Button sx={buttonSX}>Careers</Button>
+              </Link>
+              <Link href="/">
+                <Button sx={buttonSX}>Support</Button>
+              </Link>
+              <Link href="/">
+                <Button sx={buttonSX}>Privacy Policy</Button>
+              </Link>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "flex-end",
+            }}
+          >
+            <Button
+              sx={{
+                background: "linear-gradient(90deg, #33d167 0%, #2bb9cd 100%)",
+                color: "#fff",
+                borderRadius: "50px",
+                py: "0.7rem",
+                px: "2.2rem",
+                fontSize: "0.8rem",
+                fontWeight: 600,
+                textTransform: "none",
+                mt: "2rem",
+                fontFamily: "Inter, sans-serif",
+                "&:hover": {
+                  filter: "brightness(110%)",
+                },
+              }}
+            >
+              Request Invite
+            </Button>
+            <Box>
+              <Typography
+                sx={{
+                  color: "#fff",
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 400,
+                  fontSize: "0.8rem",
+                  mt: "1rem",
+                }}
+                component="div"
+              >
+                &#169; Easybank. All Rights Reserved
+              </Typography>
+            </Box>
+          </Box>
         </Container>
       </Box>
     </>
