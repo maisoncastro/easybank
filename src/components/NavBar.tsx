@@ -49,11 +49,9 @@ function NavBar() {
           }}
         >
           {/* Logo */}
-          <Typography variant="h6" component="div">
-            <Link href="/">
-              <Image src="/logo.svg" alt="logo" width={135} height={20} />
-            </Link>
-          </Typography>
+          <Link href="/">
+            <Image src="/logo.svg" alt="logo" width={135} height={20} />
+          </Link>
 
           {/* Menu Items */}
           <Box
