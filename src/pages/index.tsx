@@ -57,6 +57,14 @@ export default function Home() {
     },
   };
 
+  const whySX = {
+    display: "flex",
+    flexDirection: "column",
+    alignItems: { xs: "center", sm: "flex-start" },
+    rowGap: "1.6rem",
+    textAlign: { xs: "center", sm: "left" },
+  };
+
   return (
     <>
       <Head>
@@ -78,7 +86,7 @@ export default function Home() {
             height: "90svh",
 
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column-reverse", sm: "row" },
           }}
         >
           <Box
@@ -150,7 +158,7 @@ export default function Home() {
               sx={{
                 position: "absolute",
                 right: "-291px",
-                top: "-252.10000000000002px",
+                top: "90px",
                 zIndex: -1,
               }}
             >
@@ -193,13 +201,13 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: "column",
-
               mb: "4rem",
             }}
           >
             <Typography
               sx={{
                 fontFamily: "Inter, sans-serif",
+                textAlign: { xs: "center", sm: "left" },
               }}
               variant="h4"
               component="div"
@@ -213,28 +221,22 @@ export default function Home() {
                 mt: "2rem",
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 400,
+                textAlign: { xs: "center", sm: "left" },
               }}
             >
               We leverage Open Banking to turn your bank account into your
-              financial hub.
-              <br /> Control your finances like never before.
+              financial hub.Control your finances like never before.
             </Typography>
           </Box>
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", sm: "row" },
               justifyContent: "space-between",
               gap: "2rem",
             }}
           >
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                rowGap: "1.6rem",
-              }}
-            >
+            <Box sx={whySX}>
               <Image
                 src="/icon-online.svg"
                 alt="online"
@@ -257,13 +259,7 @@ export default function Home() {
                 of your finances wherever you are in the world.
               </Typography>
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                rowGap: "1.6rem",
-              }}
-            >
+            <Box sx={whySX}>
               <Image
                 src="/icon-budgeting.svg"
                 alt="budgeting"
@@ -286,13 +282,7 @@ export default function Home() {
                 notifications when you’re close to hitting your limits.
               </Typography>
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                rowGap: "1.6rem",
-              }}
-            >
+            <Box sx={whySX}>
               <Image
                 src="/icon-onboarding.svg"
                 alt="onboarding"
@@ -315,13 +305,7 @@ export default function Home() {
                 start taking control of your finances right away.
               </Typography>
             </Box>
-            <Box
-              sx={{
-                display: "flex",
-                flexDirection: "column",
-                rowGap: "1.6rem",
-              }}
-            >
+            <Box sx={whySX}>
               <Image src="/icon-api.svg" alt="api" width={80} height={80} />
               <Typography variant="h6" component="div">
                 Open API
@@ -555,6 +539,8 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: "flex-end",
+
+              justifyContent: "space-between",
             }}
           >
             <Button
@@ -567,7 +553,6 @@ export default function Home() {
                 fontSize: "0.8rem",
                 fontWeight: 600,
                 textTransform: "none",
-                mt: "2rem",
                 fontFamily: "Inter, sans-serif",
                 "&:hover": {
                   filter: "brightness(110%)",
@@ -583,7 +568,6 @@ export default function Home() {
                   fontFamily: "Inter, sans-serif",
                   fontWeight: 400,
                   fontSize: "0.8rem",
-                  mt: "1rem",
                 }}
                 component="div"
               >
