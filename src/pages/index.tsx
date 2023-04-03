@@ -13,13 +13,44 @@ import {
 } from "@mui/material";
 
 export default function Home() {
+  const whyCards = [
+    {
+      id: 1,
+      title: "Online Banking",
+      description:
+        "Our modern web and mobile applications allow you to keep track of your finances wherever you are in the world.",
+      image: "/icon-online.svg",
+    },
+    {
+      id: 2,
+      title: "Simple Bugeting",
+      description:
+        "See exactly where your money goes each month. Receive notifications when you’re close to hitting your limits.",
+      image: "/icon-budgeting.svg",
+    },
+    {
+      id: 3,
+      title: "Fast Onboarding",
+      description:
+        "We don’t do branches. Open your account in minutes online and start taking control of your finances right away.",
+      image: "/icon-onboarding.svg",
+    },
+    {
+      id: 4,
+      title: "Open API",
+      description:
+        "Manage your savings, investments, pension, and much more from one account. Tracking your money has never been easier.",
+      image: "/icon-api.svg",
+    },
+  ];
+
   const latestArticles = [
     {
       id: 1,
       title: "Receive money in any currency with no fees",
       author: "By Claire Robinson",
       description:
-        "The world is getting smaller and we’re becoming more mobile. So why should you be forced to only receive money in a single …",
+        "As the world becomes more interconnected and our mobility increases, it's essential to break free from the limitations of receiving money through a single method.",
       image: "/image-currency.jpg",
     },
     {
@@ -27,7 +58,7 @@ export default function Home() {
       title: "Treat yourself without worrying about money",
       author: "By Wilson Hutton",
       description:
-        "Our simple budgeting feature allows you to separate out your spending and set realistic limits each month.",
+        "Our user-friendly budgeting feature enables you to categorize your expenses and establish practical monthly limits, promoting more effective financial management.",
       image: "/image-restaurant.jpg",
     },
     {
@@ -35,7 +66,7 @@ export default function Home() {
       title: "Take your Easybank card wherever you go",
       author: "By Wilson Hutton",
       description:
-        "We want you to enjoy your travels. This is why we don’t charge any fees on purchases while you’re abroad. We’ll even show you …",
+        "Our goal is for you to fully enjoy your travels, which is why we eliminate any fees on purchases made during your time abroad.",
       image: "/image-plane.jpg",
     },
     {
@@ -43,10 +74,23 @@ export default function Home() {
       author: " By Claire Robinson",
       title: "Our invite-only Beta accounts are now live!",
       description:
-        "After a lot of hard work, by the whole team, we’re excited to launch our closed beta.",
+        "Following extensive collaborative efforts by our dedicated team, we are thrilled to announce the launch of our closed beta.",
       image: "/image-confetti.jpg",
     },
   ];
+
+  const containerBox = {
+    width: "100%",
+    backgroundColor: "#f9f9f9",
+    py: { xs: "5rem", sm: "10rem" },
+  };
+
+  const whyTypography = {
+    color: "#7c7c7c",
+
+    fontFamily: "Inter, sans-serif",
+    fontWeight: 400,
+  };
 
   const buttonSX = {
     textTransform: "none",
@@ -190,7 +234,7 @@ export default function Home() {
 
       {/* Why  */}
 
-      <Box sx={{ width: "100%", backgroundColor: "#f9f9f9", py: "10rem" }}>
+      <Box sx={containerBox}>
         <Container
           sx={{
             width: "100%",
@@ -236,99 +280,23 @@ export default function Home() {
               gap: "2rem",
             }}
           >
-            <Box sx={whySX}>
-              <Image
-                src="/icon-online.svg"
-                alt="online"
-                width={80}
-                height={80}
-              />
-              <Typography variant="h6" component="div">
-                Online Banking
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#7c7c7c",
-
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: 400,
-                }}
-                component="div"
-              >
-                Our modern web and mobile applications allow you to keep track
-                of your finances wherever you are in the world.
-              </Typography>
-            </Box>
-            <Box sx={whySX}>
-              <Image
-                src="/icon-budgeting.svg"
-                alt="budgeting"
-                width={80}
-                height={80}
-              />
-              <Typography variant="h6" component="div">
-                Simple Bugeting
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#7c7c7c",
-
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: 400,
-                }}
-                component="div"
-              >
-                See exactly where your money goes each month. Receive
-                notifications when you’re close to hitting your limits.
-              </Typography>
-            </Box>
-            <Box sx={whySX}>
-              <Image
-                src="/icon-onboarding.svg"
-                alt="onboarding"
-                width={80}
-                height={80}
-              />
-              <Typography variant="h6" component="div">
-                Fast Onboarding
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#7c7c7c",
-
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: 400,
-                }}
-                component="div"
-              >
-                We don’t do branches. Open your account in minutes online and
-                start taking control of your finances right away.
-              </Typography>
-            </Box>
-            <Box sx={whySX}>
-              <Image src="/icon-api.svg" alt="api" width={80} height={80} />
-              <Typography variant="h6" component="div">
-                Open API
-              </Typography>
-              <Typography
-                sx={{
-                  color: "#7c7c7c",
-
-                  fontFamily: "Inter, sans-serif",
-                  fontWeight: 400,
-                }}
-                component="div"
-              >
-                Manage your savings, investments, pension, and much more from
-                one account. Tracking your money has never been easier.
-              </Typography>
-            </Box>
+            {whyCards.map((why) => (
+              <Box sx={whySX} key={why.id}>
+                <Image src={why.image} alt="online" width={80} height={80} />
+                <Typography variant="h6" component="div">
+                  {why.title}
+                </Typography>
+                <Typography sx={whyTypography} component="div">
+                  {why.description}
+                </Typography>
+              </Box>
+            ))}
           </Box>
         </Container>
       </Box>
 
       {/* Articles  */}
-      <Box sx={{ width: "100%", backgroundColor: "#fff", py: "10rem" }}>
+      <Box sx={containerBox}>
         <Container>
           <Box
             sx={{
@@ -342,6 +310,7 @@ export default function Home() {
               sx={{
                 fontFamily: "Inter, sans-serif",
                 mb: "3rem",
+                textAlign: { xs: "center", sm: "left" },
               }}
               variant="h4"
               component="div"
@@ -354,7 +323,8 @@ export default function Home() {
             <Box
               sx={{
                 display: "flex",
-                flexDirection: "row",
+                flexDirection: { xs: "column", sm: "row" },
+                alignItems: { xs: "center", sm: "flex-start" },
                 justifyContent: "space-between",
                 gap: "2rem",
               }}
@@ -408,14 +378,16 @@ export default function Home() {
           width: "100%",
           backgroundColor: "#2d314e",
 
-          height: "13rem",
+          height: { xs: "100%", sm: "13rem" },
         }}
       >
         <Container
           sx={{
             display: "flex",
-            flexDirection: "row",
+            flexDirection: { xs: "column", sm: "row" },
             justifyContent: "space-between",
+            alignItems: "center",
+            rowGap: { xs: "2rem", sm: 0 },
 
             py: "3rem",
           }}
@@ -431,6 +403,7 @@ export default function Home() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between ",
+                rowGap: { xs: "2rem", sm: 0 },
                 width: "100%",
               }}
             >
@@ -496,14 +469,14 @@ export default function Home() {
           <Box
             sx={{
               display: "flex",
-              flexDirection: "row",
+              flexDirection: { xs: "column", sm: "row" },
             }}
           >
             <Box
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
+                alignItems: { xs: "center", sm: "flex-start" },
               }}
             >
               <Link href="/">
@@ -520,7 +493,7 @@ export default function Home() {
               sx={{
                 display: "flex",
                 flexDirection: "column",
-                alignItems: "flex-start",
+                alignItems: { xs: "center", sm: "flex-start" },
               }}
             >
               <Link href="/">
@@ -538,8 +511,8 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: "column",
-              alignItems: "flex-end",
-
+              alignItems: { xs: "center", sm: "flex-end" },
+              rowGap: { xs: "2rem", sm: 0 },
               justifyContent: "space-between",
             }}
           >
