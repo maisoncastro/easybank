@@ -65,7 +65,7 @@ const NavBar = () => {
         justifyContent: "center",
         alignItems: "center",
         gap: "0.9rem",
-        py: "3rem",
+        py: "2rem",
         width: "100vw",
       }}
     >

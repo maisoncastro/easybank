@@ -109,7 +109,7 @@ export default function Home() {
     borderRadius: "15px",
     border: "1px solid #e1e1e1",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.06)",
-    maxWidth: "350px",
+    maxWidth: "300px",
   };
 
   return (
@@ -280,7 +280,7 @@ export default function Home() {
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 400,
                 textAlign: { xs: "center", sm: "left" },
-                width: { xs: "100px", sm: "100%" },
+                width: { xs: "250px", sm: "100%" },
               }}
             >
               We leverage Open Banking to turn your bank account into your
