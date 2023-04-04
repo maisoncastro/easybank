@@ -11,7 +11,6 @@ import {
   Container,
   IconButton,
   Menu,
-  MenuItem,
   Toolbar,
   Typography,
   useMediaQuery,
@@ -46,7 +45,7 @@ const NavBar = () => {
     "&::after": {
       content: '""',
       position: "absolute",
-      bottom: "-23px",
+      bottom: isMobile ? "0px" : "-23px",
       left: 0,
       right: 0,
       height: 0,
@@ -55,11 +54,6 @@ const NavBar = () => {
     },
     "&:hover::after": {
       height: "6px",
-    },
-    [theme.breakpoints.down("sm")]: {
-      "&::after": {
-        bottom: "0px",
-      },
     },
   };
 
