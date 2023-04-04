@@ -104,9 +104,9 @@ export default function Home() {
   const whySX = {
     display: "flex",
     flexDirection: "column",
-    alignItems: { xs: "center", sm: "flex-start" },
+    alignItems: "center",
     rowGap: "1.6rem",
-    textAlign: { xs: "center", sm: "left" },
+    textAlign: "center",
   };
 
   return (
@@ -269,7 +269,7 @@ export default function Home() {
               }}
             >
               We leverage Open Banking to turn your bank account into your
-              financial hub.Control your finances like never before.
+              financial hub. Control your finances like never before.
             </Typography>
           </Box>
           <Box
