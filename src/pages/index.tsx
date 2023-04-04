@@ -107,6 +107,12 @@ export default function Home() {
     alignItems: "center",
     rowGap: "1.6rem",
     textAlign: "center",
+
+    backgroundColor: "#f2f5f0",
+    p: "1.5rem",
+    borderRadius: "15px",
+    border: "1px solid #e1e1e1",
+    boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.06)",
   };
 
   return (
@@ -207,7 +213,6 @@ export default function Home() {
               sx={{
                 position: "absolute",
                 right: "-291px",
-                top: "90px",
               }}
             >
               <Image
@@ -462,6 +467,7 @@ export default function Home() {
                 display: "flex",
                 flexDirection: "column",
                 alignItems: { xs: "center", sm: "flex-start" },
+                justifyContent: "flex-start",
               }}
             >
               <Link href="/">
