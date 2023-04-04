@@ -129,6 +129,7 @@ export default function Home() {
         sx={{
           width: "100%",
           backgroundColor: "#f2f5f0",
+          pb: { xs: "5rem", sm: 0 },
 
           overflowX: "hidden",
           overflowY: "hidden",
@@ -203,7 +204,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              alignItems: "flex-end",
+              alignItems: { xs: "center", sm: "flex-end" },
               position: "relative",
               height: "100%",
               width: "50%",
@@ -211,8 +212,8 @@ export default function Home() {
           >
             <Box
               sx={{
-                position: "absolute",
-                right: "-291px",
+                position: { xs: null, sm: "absolute" },
+                right: { xs: 0, sm: "-291px" },
               }}
             >
               <Image
