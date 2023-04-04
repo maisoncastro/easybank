@@ -18,7 +18,11 @@ import {
 import { useTheme } from "@mui/system";
 // import MenuIcon from "@mui/icons-material/Menu";
 
-const NavBar = () => {
+interface NavBarProps {
+  toggleDarkMode: () => void;
+}
+
+const NavBar = ({ toggleDarkMode }: NavBarProps) => {
   const [drawerOpen, setDrawerOpen] = useState(false);
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
@@ -103,6 +107,9 @@ const NavBar = () => {
       >
         Request Invite
       </Button>
+      {/* <Button onClick={toggleDarkMode}>
+        {theme.palette.mode === "dark" ? "Light Mode" : "Dark Mode"}
+      </Button> */}
     </Box>
   );
 
@@ -196,6 +203,9 @@ const NavBar = () => {
                 >
                   Request Invite
                 </Button>
+                {/* <Button onClick={toggleDarkMode}>
+                  {theme.palette.mode === "dark" ? "Light Mode" : "Dark Mode"}
+                </Button> */}
               </Box>
             </>
           )}
