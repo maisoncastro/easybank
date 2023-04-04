@@ -142,7 +142,10 @@ const NavBar = () => {
                 anchor="top"
                 open={drawerOpen}
                 onClose={toggleDrawer(false)}
-                sx={{ zIndex: (theme.zIndex?.appBar || 1000) + 1 }} // Update this line
+                sx={{
+                  zIndex:
+                    ((theme.zIndex as { appBar?: number })?.appBar || 1000) + 1,
+                }}
               >
                 {drawerList}
               </Drawer>
