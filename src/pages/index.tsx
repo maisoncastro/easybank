@@ -175,7 +175,7 @@ export default function Home() {
                 fontWeight: 400,
                 fontSize: "1.1rem",
                 textAlign: { xs: "center", sm: "left" },
-                width: { xs: "335px", sm: null },
+                width: { xs: "335px", sm: "auto" },
               }}
             >
               Take your financial life online.
