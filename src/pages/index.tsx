@@ -334,6 +334,7 @@ export default function Home() {
                   <Card
                     sx={{
                       maxWidth: 300,
+                      minHeight: 465,
                       borderRadius: "5px",
                       boxShadow: "none",
                     }}
@@ -470,6 +471,7 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
+              gap: { xs: "6rem", sm: 0 },
             }}
           >
             <Box
@@ -512,7 +514,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               alignItems: { xs: "center", sm: "flex-end" },
-              rowGap: { xs: "2rem", sm: 0 },
+              rowGap: { xs: "2rem", sm: null },
               justifyContent: "space-between",
             }}
           >
