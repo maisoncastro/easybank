@@ -10,9 +10,14 @@ import {
   CardMedia,
   Container,
   Typography,
+  useMediaQuery,
 } from "@mui/material";
+import { useTheme } from "@mui/system";
 
 export default function Home() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("sm"));
+
   const whyCards = [
     {
       id: 1,
@@ -129,7 +134,7 @@ export default function Home() {
       >
         <Container
           sx={{
-            height: "90svh",
+            height: isMobile ? "90svh" : "100svh",
 
             display: "flex",
             alignItems: { xs: "center", sm: null },
@@ -170,11 +175,13 @@ export default function Home() {
                 fontWeight: 400,
                 fontSize: "1.1rem",
                 textAlign: { xs: "center", sm: "left" },
+                width: { xs: "335px", sm: null },
               }}
             >
-              Take your financial life online. Your Easybank account will be a
-              one-stop-shop for spending, saving, budgeting, investi ng, and
-              much more.
+              Take your financial life online.
+              <br />
+              Your Easybank account will be a one-stop-shop for spending,
+              saving, budgeting, investing, and much more.
             </Typography>
             <Button
               sx={{
@@ -207,19 +214,34 @@ export default function Home() {
               width: "50%",
             }}
           >
-            <Box
-              sx={{
-                position: { xs: null, sm: "absolute" },
-                right: { xs: 0, sm: "-291px" },
-              }}
-            >
-              <Image
-                src="/image-mockups.png"
-                alt="mockups"
-                width={767}
-                height={939}
-              />
-            </Box>
+            {isMobile ? (
+              <Box
+                sx={{
+                  display: "none",
+                }}
+              >
+                <Image
+                  src="/image-mockups.png"
+                  alt="mockups"
+                  width={567}
+                  height={739}
+                />
+              </Box>
+            ) : (
+              <Box
+                sx={{
+                  position: { xs: null, sm: "absolute" },
+                  right: { xs: 0, sm: "-291px" },
+                }}
+              >
+                <Image
+                  src="/image-mockups.png"
+                  alt="mockups"
+                  width={767}
+                  height={939}
+                />
+              </Box>
+            )}
           </Box>
         </Container>
       </Box>
