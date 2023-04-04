@@ -113,6 +113,7 @@ export default function Home() {
     borderRadius: "15px",
     border: "1px solid #e1e1e1",
     boxShadow: "0px 0px 10px rgba(0, 0, 0, 0.06)",
+    maxWidth: "350px",
   };
 
   return (
@@ -140,6 +141,8 @@ export default function Home() {
             height: "90svh",
 
             display: "flex",
+            alignItems: { xs: "center", sm: null },
+
             flexDirection: { xs: "column-reverse", sm: "row" },
           }}
         >
@@ -148,7 +151,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               justifyContent: "center",
-              alignItems: "flex-start",
+              alignItems: { xs: "center", sm: "flex-start" },
               width: "50%",
               flexShrink: 0,
             }}
@@ -157,12 +160,14 @@ export default function Home() {
               sx={{
                 fontFamily: "IBM Plex Mono, sans-serif",
                 color: "#262626",
+                textAlign: { xs: "center", sm: "left" },
               }}
               variant="h3"
               component="div"
             >
               Next Generation
-              <br /> Digital Banking
+              <br />
+              Digital Banking
             </Typography>
             <Typography
               variant="h6"
@@ -173,6 +178,7 @@ export default function Home() {
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 400,
                 fontSize: "1.1rem",
+                textAlign: { xs: "center", sm: "left" },
               }}
             >
               Take your financial life online. Your Easybank account will be a
@@ -240,6 +246,7 @@ export default function Home() {
               display: "flex",
               flexDirection: "column",
               mb: "4rem",
+              alignItems: { xs: "center", sm: "flex-start" },
             }}
           >
             <Typography
@@ -260,6 +267,7 @@ export default function Home() {
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 400,
                 textAlign: { xs: "center", sm: "left" },
+                width: { xs: "100px", sm: "100%" },
               }}
             >
               We leverage Open Banking to turn your bank account into your
@@ -271,6 +279,7 @@ export default function Home() {
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
               justifyContent: "space-between",
+              alignItems: "center",
               gap: "2rem",
             }}
           >
