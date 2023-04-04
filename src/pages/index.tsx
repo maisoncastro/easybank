@@ -459,7 +459,7 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
-              gap: { xs: "6rem", sm: "10rem" },
+              gap: { xs: 0, sm: "10rem" },
             }}
           >
             <Box
