@@ -81,7 +81,7 @@ export default function Home() {
 
   const containerBox = {
     width: "100%",
-    backgroundColor: "#f9f9f9",
+    backgroundColor: "#f6f8f4",
     py: { xs: "5rem", sm: "10rem" },
   };
 
@@ -92,9 +92,9 @@ export default function Home() {
     fontWeight: 400,
   };
 
-  const buttonSX = {
+  const footerButton = {
     textTransform: "none",
-    color: "#fff",
+    color: "#262626",
     fontFamily: "Inter, sans-serif",
     "&:hover": {
       backgroundColor: "transparent",
@@ -122,6 +122,8 @@ export default function Home() {
       <Box
         sx={{
           width: "100%",
+          backgroundColor: "#f2f5f0",
+
           overflowX: "hidden",
           overflowY: "hidden",
         }}
@@ -147,6 +149,7 @@ export default function Home() {
             <Typography
               sx={{
                 fontFamily: "IBM Plex Mono, sans-serif",
+                color: "#262626",
               }}
               variant="h3"
               component="div"
@@ -162,6 +165,7 @@ export default function Home() {
                 mt: "2rem",
                 fontFamily: "Inter, sans-serif",
                 fontWeight: 400,
+                fontSize: "1.1rem",
               }}
             >
               Take your financial life online. Your Easybank account will be a
@@ -204,7 +208,6 @@ export default function Home() {
                 position: "absolute",
                 right: "-291px",
                 top: "90px",
-                zIndex: -1,
               }}
             >
               <Image
@@ -212,21 +215,6 @@ export default function Home() {
                 alt="mockups"
                 width={767}
                 height={939}
-              />
-            </Box>
-            <Box
-              sx={{
-                position: "absolute",
-                zIndex: -2,
-                top: "-363px",
-                left: "-125px",
-              }}
-            >
-              <Image
-                src="/bg-intro-desktop.svg"
-                alt="svg-background"
-                width={1600}
-                height={1400}
               />
             </Box>
           </Box>
@@ -239,7 +227,6 @@ export default function Home() {
         <Container
           sx={{
             width: "100%",
-            backgroundColor: "#f9f9f9",
           }}
         >
           <Box
@@ -378,7 +365,7 @@ export default function Home() {
       <Box
         sx={{
           width: "100%",
-          backgroundColor: "#2d314e",
+          backgroundColor: "#fff",
 
           height: { xs: "100%", sm: "13rem" },
         }}
@@ -410,12 +397,7 @@ export default function Home() {
               }}
             >
               <Link href="/">
-                <Image
-                  src="/logo-white.svg"
-                  alt="logo"
-                  width={139}
-                  height={20}
-                />
+                <Image src="/logo.svg" alt="logo" width={139} height={20} />
               </Link>
               <Box
                 sx={{
@@ -427,7 +409,7 @@ export default function Home() {
               >
                 <Link href="/">
                   <Image
-                    src="/icon-facebook.svg"
+                    src="/icon-facebook-black.svg"
                     alt="logo"
                     width={20}
                     height={20}
@@ -435,7 +417,7 @@ export default function Home() {
                 </Link>
                 <Link href="/">
                   <Image
-                    src="/icon-twitter.svg"
+                    src="/icon-twitter-black.svg"
                     alt="logo"
                     width={20}
                     height={20}
@@ -443,7 +425,7 @@ export default function Home() {
                 </Link>
                 <Link href="/">
                   <Image
-                    src="/icon-youtube.svg"
+                    src="/icon-youtube-black.svg"
                     alt="logo"
                     width={20}
                     height={20}
@@ -451,7 +433,7 @@ export default function Home() {
                 </Link>
                 <Link href="/">
                   <Image
-                    src="/icon-instagram.svg"
+                    src="/icon-instagram-black.svg"
                     alt="logo"
                     width={20}
                     height={20}
@@ -459,7 +441,7 @@ export default function Home() {
                 </Link>
                 <Link href="/">
                   <Image
-                    src="/icon-pinterest.svg"
+                    src="/icon-pinterest-black.svg"
                     alt="logo"
                     width={20}
                     height={20}
@@ -483,13 +465,13 @@ export default function Home() {
               }}
             >
               <Link href="/">
-                <Button sx={buttonSX}>About Us</Button>
+                <Button sx={footerButton}>About Us</Button>
               </Link>
               <Link href="/">
-                <Button sx={buttonSX}>Contact</Button>
+                <Button sx={footerButton}>Contact</Button>
               </Link>
               <Link href="/">
-                <Button sx={buttonSX}>Blog</Button>
+                <Button sx={footerButton}>Blog</Button>
               </Link>
             </Box>
             <Box
@@ -500,13 +482,13 @@ export default function Home() {
               }}
             >
               <Link href="/">
-                <Button sx={buttonSX}>Careers</Button>
+                <Button sx={footerButton}>Careers</Button>
               </Link>
               <Link href="/">
-                <Button sx={buttonSX}>Support</Button>
+                <Button sx={footerButton}>Support</Button>
               </Link>
               <Link href="/">
-                <Button sx={buttonSX}>Privacy Policy</Button>
+                <Button sx={footerButton}>Privacy Policy</Button>
               </Link>
             </Box>
           </Box>
@@ -540,9 +522,9 @@ export default function Home() {
             <Box>
               <Typography
                 sx={{
-                  color: "#fff",
+                  color: "#262626",
                   fontFamily: "Inter, sans-serif",
-                  fontWeight: 400,
+                  fontWeight: 500,
                   fontSize: "0.8rem",
                 }}
                 component="div"
