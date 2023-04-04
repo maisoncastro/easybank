@@ -123,6 +123,7 @@ export default function Home() {
         sx={{
           width: "100%",
           overflowX: "hidden",
+          overflowY: "hidden",
         }}
       >
         <Container
@@ -404,7 +405,7 @@ export default function Home() {
                 display: "flex",
                 flexDirection: "column",
                 justifyContent: "space-between ",
-                rowGap: { xs: "2rem", sm: 0 },
+                rowGap: { xs: "2rem", sm: null },
                 width: "100%",
               }}
             >
@@ -471,7 +472,7 @@ export default function Home() {
             sx={{
               display: "flex",
               flexDirection: { xs: "column", sm: "row" },
-              gap: { xs: "6rem", sm: 0 },
+              gap: { xs: "6rem", sm: "10rem" },
             }}
           >
             <Box
