@@ -1,38 +1,79 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Easybank Landing Page - Next.js & Material UI
+
+This is a responsive landing page for the fictional Easybank company. The project is built using Next.js and Material UI and is deployed on Vercel. You can view the live demo of the project here: [https://project1-i5ql3rnp6-maisoncastro.vercel.app/](https://project1-i5ql3rnp6-maisoncastro.vercel.app/)
+
+## Table of Contents
+
+- [Overview](#overview)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+- [Deploying](#deploying)
+- [Author](#author)
+- [Acknowledgments](#acknowledgments)
+
+## Overview
+
+This project is a responsive landing page for the Easybank company, which showcases its features, articles, and a call-to-action. The main goal was to create a web page that closely resembles the given design while practicing my skills in Next.js, Material UI, and responsive design.
+
+## Built With
+
+- [Next.js](https://nextjs.org/)
+- [Material UI](https://mui.com/)
+- [Vercel](https://vercel.com/)
 
 ## Getting Started
 
-First, run the development server:
+To get a local copy up and running, follow these steps:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. Clone the repository
+   \```bash
+   git clone https://github.com/maisoncastro/easybank-landing-page.git
+   \```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Change to the project directory
+   \```bash
+   cd easybank-landing-page
+   \```
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+3. Install the required packages
+   \```bash
+   npm install
+   \```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+4. Start the development server
+   \```bash
+   npm run dev
+   \```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+5. Open your browser and navigate to [http://localhost:3000](http://localhost:3000)
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+## Deploying
 
-## Learn More
+To deploy this project on Vercel, follow these steps:
 
-To learn more about Next.js, take a look at the following resources:
+1. Sign up for a [Vercel account](https://vercel.com/signup) if you don't have one
+2. Install the Vercel CLI
+   \```bash
+   npm install -g vercel
+   \```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+3. Log in to your Vercel account
+   \```bash
+   vercel login
+   \```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. Deploy the project
+   \```bash
+   vercel
+   \```
 
-## Deploy on Vercel
+5. Follow the prompts and choose the appropriate options for your project. Once done, the project will be deployed and the live URL will be provided.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Author
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+- Your Name - [maisoncastro](https://github.com/your_username)
+
+## Acknowledgments
+
+- The project design and requirements were provided by [Frontend Mentor](https://www.frontendmentor.io)
+- [Frontend Mentor - Easybank landing page challenge](https://www.frontendmentor.io/challenges/easybank-landing-page-WaUhkoDN)
